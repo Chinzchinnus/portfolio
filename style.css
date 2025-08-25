@@ -1,41 +1,34 @@
-/* General styles */
+/* Reset */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: url('your-image.jpg') no-repeat center center/cover;
-  color: #333;
   transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
-header {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
+/* Fullscreen about */
+.fullscreen {
+  height: 100vh;
+  background: url('your-image.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  position: relative;
 }
 
-header h1 {
+.intro h1 {
+  font-size: 3rem;
   margin: 0.5rem 0;
 }
 
-nav {
-  margin: 1rem 0;
+.intro p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Dark mode button */
 #darkModeBtn {
   margin-top: 10px;
   padding: 0.5rem 1rem;
@@ -50,36 +43,7 @@ nav a:hover {
   background: #005fa3;
 }
 
-/* Main content */
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 1rem;
-}
-
-section {
-  background: rgba(255,255,255,0.9);
-  padding: 2rem;
-  margin: 1rem 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-h2 {
-  margin-top: 0;
-  color: #0077cc;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  margin-top: 2rem;
-}
-
-/* Scrolling Name */
+/* Scrolling text */
 .scrolling-text {
   position: absolute;
   bottom: 20px;
@@ -91,7 +55,7 @@ footer {
 .scrolling-text span {
   display: inline-block;
   padding-left: 100%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
@@ -101,6 +65,79 @@ footer {
 @keyframes scroll-left {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
+}
+
+/* Sections */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0077cc;
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+}
+
+/* Floating menu button */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: #0077cc;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle:hover {
+  background: #005fa3;
+}
+
+/* Side menu (hidden by default) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.side-menu.show {
+  right: 0;
 }
 
 /* Dark Mode */
@@ -114,11 +151,10 @@ body.dark-mode section {
   box-shadow: 0 2px 6px rgba(255,255,255,0.1);
 }
 
-body.dark-mode header,
 body.dark-mode footer {
   background: #111;
 }
 
-body.dark-mode nav a {
-  color: #1e90ff;
+body.dark-mode .menu-toggle {
+  background: #1e90ff;
 }

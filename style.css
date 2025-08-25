@@ -3,13 +3,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
-  background: #f9f9f9;
+  background: url('your-image.jpg') no-repeat center center/cover;
   color: #333;
   transition: background 0.3s, color 0.3s;
 }
 
+/* Header */
 header {
-  background: #333;
+  background: rgba(0,0,0,0.6);
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
@@ -34,6 +35,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Dark mode button */
 #darkModeBtn {
   margin-top: 10px;
   padding: 0.5rem 1rem;
@@ -48,6 +50,7 @@ nav a:hover {
   background: #005fa3;
 }
 
+/* Main content */
 main {
   max-width: 900px;
   margin: auto;
@@ -55,7 +58,7 @@ main {
 }
 
 section {
-  background: #fff;
+  background: rgba(255,255,255,0.9);
   padding: 2rem;
   margin: 1rem 0;
   border-radius: 10px;
@@ -67,12 +70,37 @@ h2 {
   color: #0077cc;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #333;
+  background: rgba(0,0,0,0.6);
   color: #fff;
   margin-top: 2rem;
+}
+
+/* Scrolling Name */
+.scrolling-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scrolling-text span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Dark Mode */
@@ -81,15 +109,12 @@ body.dark-mode {
   color: #f1f1f1;
 }
 
-body.dark-mode header {
-  background: #111;
-}
-
 body.dark-mode section {
   background: #2a2a2a;
   box-shadow: 0 2px 6px rgba(255,255,255,0.1);
 }
 
+body.dark-mode header,
 body.dark-mode footer {
   background: #111;
 }

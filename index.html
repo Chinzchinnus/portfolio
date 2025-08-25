@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Chinnu | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Chinnu</h1>
-    <p>Aspiring Junior Web Developer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
-  </header>
+  <!-- Fullscreen About Section -->
+  <section id="home" class="fullscreen">
+    <div class="intro">
+      <h1>Hi, I'm Chinnu</h1>
+      <p>Aspiring Junior Web Developer</p>
+      <button id="darkModeBtn">🌙 Dark Mode</button>
+    </div>
+    <!-- Scrolling name -->
+    <div class="scrolling-text">
+      <span>✨ Chinnu ✨</span>
+    </div>
+  </section>
 
-  <!-- Scrolling Name -->
-  <div class="scrolling-text">
-    <span>✨ Chinnu ✨</span>
-  </div>
-
+  <!-- Other sections -->
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am passionate about creating user-friendly websites and continuously learning new
-        technologies. This portfolio highlights my journey into web development.
-      </p>
-    </section>
-
     <section id="projects">
       <h2>Projects</h2>
       <ul>
@@ -49,9 +39,20 @@
       <p>GitHub: <a href="https://github.com/Chinzchinnus" target="_blank">github.com/Chinzchinnus</a></p>
     </section>
   </main>
+
   <footer>
     <p>© 2025 Chinnu. All rights reserved.</p>
   </footer>
+
+  <!-- Floating menu button -->
+  <div class="menu-toggle" id="menuToggle">☰</div>
+
+  <!-- Hidden side menu -->
+  <nav class="side-menu" id="sideMenu">
+    <a href="#home">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

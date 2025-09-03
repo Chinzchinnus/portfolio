@@ -9,7 +9,7 @@ body {
 /* Fullscreen about */
 .fullscreen {
   height: 100vh;
-  background: url('your-image.jpg') no-repeat center center/cover;
+  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Fcomputer-portfolio&psig=AOvVaw1vHpNBF_0laXKKDLCsrOW1&ust=1757015194188000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCKjC7ZWtvY8DFQAAAAAdAAAAABAE') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -66,6 +66,7 @@ nav a:hover {
 }
 
 .menu-toggle {
+  color: white;
   display: none;
   font-size: 1.5rem;
   background: none;
@@ -163,7 +164,6 @@ h2 {
 
 
 .job ul {
-  height: 15vh;
   margin-top: 0.5rem;
   padding-left: 1.5rem;
 }

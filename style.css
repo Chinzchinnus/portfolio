@@ -66,6 +66,7 @@ nav a:hover {
 }
 
 .menu-toggle {
+  color: #007acc;
   display: none;
   font-size: 1.5rem;
   background: none;
